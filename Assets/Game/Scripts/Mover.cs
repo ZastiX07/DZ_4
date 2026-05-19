@@ -1,13 +1,13 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class MoverSphere : MonoBehaviour
+public class Mover : MonoBehaviour
 {
     [SerializeField] private float _distance = 3f;
     [SerializeField] private float _duration = 1f;
-    [SerializeField] private Sphere _sphere;
+    [SerializeField] private GameObject _gameObject;
 
-    public Vector3 StartPosition => _sphere.transform.position;
+    public Vector3 StartPosition => _gameObject.transform.position;
     public Vector3 EndPosition => StartPosition + Vector3.forward * _distance;
 
     private void Awake()
@@ -17,6 +17,6 @@ public class MoverSphere : MonoBehaviour
 
     private void Move()
     {
-        _sphere.transform.DOMove(EndPosition, _duration).SetLoops(-1, LoopType.Yoyo);
+        _gameObject.transform.DOMove(EndPosition, _duration).SetLoops(-1, LoopType.Yoyo);
     }
 }

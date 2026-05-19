@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 573607027}
   - component: {fileID: 573607026}
   m_Layer: 0
-  m_Name: MoverSphere
+  m_Name: Mover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoverSphere
   _distance: 3
   _duration: 1
-  _sphere: {fileID: 1776739560}
+  _gameObject: {fileID: 1776739559}
 --- !u!4 &573607027
 Transform:
   m_ObjectHideFlags: 0
@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 1860315417}
   - component: {fileID: 1860315416}
   m_Layer: 0
-  m_Name: MoverCube
+  m_Name: Rotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cbed550287ca142a3e41db52010343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoverCube
-  _cube: {fileID: 1524953832}
+  _gameObject: {fileID: 1524953831}
   _speed: 10
 --- !u!4 &1860315417
 Transform:
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 1918024315}
   - component: {fileID: 1918024314}
   m_Layer: 0
-  m_Name: MoverCapsule
+  m_Name: Scaler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -934,7 +934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702aff8f8cc0c194d89246b33b2a8c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoverCapsule
-  _capsule: {fileID: 555861774}
+  _gameObject: {fileID: 555861773}
   _valueIncreasedSize: 2
   _magnificationLimit: 5
 --- !u!4 &1918024315

@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class MoverCube : MonoBehaviour
+public class Rotator : MonoBehaviour
 {
-    [SerializeField] private Cube _cube;
+    [SerializeField] private GameObject _gameObject;
     [SerializeField] private float _speed;
 
     private void Update()
@@ -12,6 +12,6 @@ public class MoverCube : MonoBehaviour
 
     private void Move()
     {
-        _cube.transform.Rotate(0, _speed, 0);
+        _gameObject.transform.Rotate(0, _speed, 0);
     }
 }

@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class MoverCapsule : MonoBehaviour
+public class Scaler : MonoBehaviour
 {
-    [SerializeField] private Capsule _capsule;
+    [SerializeField] private GameObject _gameObject;
     [SerializeField] private float _valueIncreasedSize = 2f;
     [SerializeField] private float _magnificationLimit = 5f;
 
@@ -22,18 +22,18 @@ public class MoverCapsule : MonoBehaviour
     private void ChangeSize(float changeValue)
     {
         float change = changeValue * Time.deltaTime;
-        float newSize = _capsule.SizeX + change;
+        float newSize = _gameObject.transform.localScale.x + change;
 
         newSize = Mathf.Clamp(newSize, 0, _magnificationLimit);
 
-        _capsule.transform.localScale = new Vector3(newSize, newSize, newSize);
+        _gameObject.transform.localScale = new Vector3(newSize, newSize, newSize);
     }
 
     private void SwitchMode()
     {
-        if (_capsule.SizeX >= _magnificationLimit)
+        if (_gameObject.transform.localScale.x >= _magnificationLimit)
             _isGrowing = false;
-        else if (_capsule.SizeX <= 0.1f)
+        else if (_gameObject.transform.localScale.x <= 0.1f)
             _isGrowing = true;
     }
 }
